@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-
 import './App.css';
-import { WeatherEnum, getWeatherIcon, getWeatherText, getWeatherEnum, getTempratureText } from './WeatherUtil';
+import { getTempratureText, getWeatherEnum, getWeatherIcon, getWeatherText, WeatherEnum } from './WeatherUtil';
 
 const App = () => {
   const [temp, setTemp] = useState(0);
