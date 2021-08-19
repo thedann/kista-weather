@@ -13,7 +13,7 @@ const App = () => {
 
   const [isInKista, setIsInKista] = useState<boolean>(true);
 
-  useEffect(() => updateData(), []);
+  useEffect(() => updateData());
 
   const updateData = () => {
     fetch(`http://api.weatherapi.com/v1/current.json?key=3fc503f84c8f42b2a45111753211908&q=${customLongitude},${customLatitude}&aqi=no`).then(
@@ -38,8 +38,6 @@ const App = () => {
   const updateLocation = () => {
     updateData();
     setShowHiddenOverlay(false);
-
-    // location.push(`/${newUrl}`);
   };
 
   const showHiddenOverlayHtml = () => {
