@@ -16,7 +16,7 @@ const App = () => {
   useEffect(() => updateData());
 
   const updateData = () => {
-    fetch(`http://api.weatherapi.com/v1/current.json?key=3fc503f84c8f42b2a45111753211908&q=${customLongitude},${customLatitude}&aqi=no`).then(
+    fetch(`https://api.weatherapi.com/v1/current.json?key=3fc503f84c8f42b2a45111753211908&q=${customLongitude},${customLatitude}&aqi=no`).then(
       async (response) => {
         const result = await response.json();
         const currentTemp = result?.current?.temp_c;
